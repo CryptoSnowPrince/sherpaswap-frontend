@@ -8,12 +8,12 @@ import { BSC_RPC_URLS, BSC_TESTNET_RPC_URLS } from '../config/constants/rpc'
 
 const NETWORK_CONFIG = {
   [ChainId.BSC]: {
-    name: 'BNB Smart Chain Mainnet',
+    name: 'EVT Smart Chain Mainnet',
     scanURL: BASE_BSC_SCAN_URLS[ChainId.BSC],
     rpcUrls: BSC_RPC_URLS,
   },
   [ChainId.BSC_TESTNET]: {
-    name: 'BNB Smart Chain Testnet',
+    name: 'EVT Smart Chain Testnet',
     scanURL: BASE_BSC_SCAN_URLS[ChainId.BSC_TESTNET],
     rpcUrls: BSC_TESTNET_RPC_URLS,
   },
@@ -46,7 +46,7 @@ export const setupNetwork = async (chainId?: number, externalProvider?: External
                 chainId: `0x${chainId.toString(16)}`,
                 chainName: NETWORK_CONFIG[chainId].name,
                 nativeCurrency: {
-                  name: 'BNB',
+                  name: 'EVT',
                   symbol: 'bnb',
                   decimals: 18,
                 },

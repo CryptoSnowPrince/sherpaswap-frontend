@@ -47,8 +47,8 @@ export const usePollFarmsWithUserData = () => {
 
 /**
  * Fetches the "core" farm data used globally
- * 2 = CAKE-BNB LP
- * 3 = BUSD-BNB LP
+ * 2 = CAKE-EVT LP
+ * 3 = BUSD-EVT LP
  */
 const coreFarmPIDs = {
   56: [2, 3],

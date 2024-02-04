@@ -4,7 +4,7 @@ import { bscTokens, bscTestnetTokens } from './tokens'
 import { ChainTokenList } from './types'
 
 export const ROUTER_ADDRESS = {
-  [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
+  [ChainId.BSC]: '0x64AA69b86d3697a74FF00B9677c9e9F21Cd9d7C7',
   [ChainId.BSC_TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
 }
 
@@ -41,7 +41,7 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  [ChainId.BSC]: [bscTokens.busd, bscTokens.cake, bscTokens.btcb],
+  [ChainId.BSC]: [bscTokens.cake],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
 }
 
@@ -54,8 +54,6 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.BSC]: [
     [bscTokens.cake, bscTokens.wbnb],
-    [bscTokens.busd, bscTokens.usdt],
-    [bscTokens.dai, bscTokens.usdt],
   ],
 }
 
@@ -74,8 +72,8 @@ export const PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN: Percent = new Percent(JSBI.Bi
 // for non expert mode disable swaps above this
 export const BLOCKED_PRICE_IMPACT_NON_EXPERT: Percent = new Percent(JSBI.BigInt(1500), BIPS_BASE) // 15%
 
-// used to ensure the user doesn't send so much BNB so they end up with <.01
-export const MIN_BNB: JSBI = JSBI.exponentiate(BIG_INT_TEN, JSBI.BigInt(16)) // .01 BNB
+// used to ensure the user doesn't send so much EVT so they end up with <.01
+export const MIN_BNB: JSBI = JSBI.exponentiate(BIG_INT_TEN, JSBI.BigInt(16)) // .01 EVT
 export const BETTER_TRADE_LESS_HOPS_THRESHOLD = new Percent(JSBI.BigInt(50), BIPS_BASE)
 
 export const ZERO_PERCENT = new Percent('0')
@@ -84,8 +82,8 @@ export const ONE_HUNDRED_PERCENT = new Percent('1')
 export const BASE_FEE = new Percent(JSBI.BigInt(25), BIPS_BASE)
 export const INPUT_FRACTION_AFTER_FEE = ONE_HUNDRED_PERCENT.subtract(BASE_FEE)
 
-// BNB
-export const DEFAULT_INPUT_CURRENCY = 'BNB'
+// EVT
+export const DEFAULT_INPUT_CURRENCY = 'EVT'
 // CAKE
 export const DEFAULT_OUTPUT_CURRENCY = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
 

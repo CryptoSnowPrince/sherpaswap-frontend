@@ -105,7 +105,7 @@ export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonCAKE
     ),
   ])
 
-  const totalWonBNB = getTotalWonMarket(BNBMarket, 'BNB')
+  const totalWonBNB = getTotalWonMarket(BNBMarket, 'EVT')
   const totalWonCAKE = getTotalWonMarket(CAKEMarket, 'CAKE')
 
   return { totalWonBNB, totalWonCAKE }

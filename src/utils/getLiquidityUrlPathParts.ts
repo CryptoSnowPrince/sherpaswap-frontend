@@ -10,8 +10,8 @@ const getLiquidityUrlPathParts = ({
   tokenAddress: string
 }): string => {
   const wBnbAddress = bscTokens.wbnb.address
-  const firstPart = !quoteTokenAddress || quoteTokenAddress === wBnbAddress ? 'BNB' : quoteTokenAddress
-  const secondPart = !tokenAddress || tokenAddress === wBnbAddress ? 'BNB' : tokenAddress
+  const firstPart = !quoteTokenAddress || quoteTokenAddress === wBnbAddress ? 'EVT' : quoteTokenAddress
+  const secondPart = !tokenAddress || tokenAddress === wBnbAddress ? 'EVT' : tokenAddress
   return `${firstPart}/${secondPart}`
 }
 

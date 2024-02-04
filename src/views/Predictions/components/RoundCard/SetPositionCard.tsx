@@ -37,7 +37,7 @@ import PositionTag from '../PositionTag'
 import FlexRow from '../FlexRow'
 
 const LOGOS = {
-  BNB: BinanceIcon,
+  EVT: BinanceIcon,
   CAKE: LogoIcon,
 }
 
@@ -77,7 +77,7 @@ const getValueAsEthersBn = (value: string) => {
 }
 
 const TOKEN_BALANCE_CONFIG = {
-  BNB: useGetBnbBalance,
+  EVT: useGetBnbBalance,
   CAKE: useGetCakeBalance,
 }
 
@@ -110,8 +110,8 @@ const SetPositionCard: React.FC<React.PropsWithChildren<SetPositionCardProps>> =
     t('You can now start prediction'),
   )
 
-  // BNB prediction doesn't need approval
-  const doesCakeApprovePrediction = token.symbol === 'BNB' || isVaultApproved
+  // EVT prediction doesn't need approval
+  const doesCakeApprovePrediction = token.symbol === 'EVT' || isVaultApproved
 
   const { balance: bnbBalance } = useTokenBalance()
 

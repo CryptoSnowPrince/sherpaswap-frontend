@@ -2,11 +2,11 @@ import { ChainId, Token, WBNB } from '@pancakeswap/sdk'
 
 const CAKE_MAINNET = new Token(
   ChainId.BSC,
-  '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+  '0x1FC855B99e97FE958c40dbF9876961Eb80F78091',
   18,
-  'CAKE',
-  'PancakeSwap Token',
-  'https://pancakeswap.finance/',
+  'YAK',
+  'YAK',
+  'https://evtscan.com/',
 )
 
 const CAKE_TESTNET = new Token(
@@ -71,14 +71,14 @@ export const BUSD: Record<ChainId, Token> = {
 
 export const bscTokens = {
   wbnb: WBNB[ChainId.BSC],
-  // bnb here points to the wbnb contract. Wherever the currency BNB is required, conditional checks for the symbol 'BNB' can be used
+  // bnb here points to the wbnb contract. Wherever the currency EVT is required, conditional checks for the symbol 'EVT' can be used
   bnb: new Token(
     ChainId.BSC,
-    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    '0x399FA293e0CD85f4B87809698C921829E730a687',
     18,
-    'BNB',
-    'BNB',
-    'https://www.binance.com/',
+    'EVT',
+    'EVT',
+    'https://evtscan.com/',
   ),
   cake: CAKE_MAINNET,
   gmi: new Token(ChainId.BSC, '0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846', 18, 'GMI', 'Gamifi', 'https://gamifi.gg/'),
@@ -2230,7 +2230,7 @@ export const bscTokens = {
     '0xE85aFCcDaFBE7F2B096f268e31ccE3da8dA2990A',
     18,
     'aBNBc',
-    'Ankr BNB Reward Bearing Certificate',
+    'Ankr EVT Reward Bearing Certificate',
     'https://www.ankr.com/',
   ),
   ankr: new Token(
@@ -2335,7 +2335,7 @@ export const bscTokens = {
     '0xc2E9d07F66A89c44062459A47a0D2Dc038E4fb16',
     18,
     'stkBNB',
-    'Staked BNB',
+    'Staked EVT',
     'https://pstake.finance/bnb',
   ),
   pstake: new Token(

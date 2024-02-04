@@ -92,8 +92,9 @@ export const bsc: Chain = {
   },
   multicall: {
     // address: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B', // multicall v2
+    // blockCreated: 7162653,
     address: '0x1d9aB48F56f13b04A57594CE141e2CF83844e3D9',
-    blockCreated: 7162653,
+    blockCreated: 1260177,
   },
   nativeCurrency: {
     name: 'EVT',
@@ -104,19 +105,19 @@ export const bsc: Chain = {
 
 export const bscTest: Chain = {
   id: 97,
-  name: 'BNB Smart Chain Testnet',
-  network: 'bsc-testnet',
+  name: 'EVT Smart Chain Testnet',
+  network: 'evt-testnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'BNB',
-    symbol: 'BNB',
+    name: 'EVT',
+    symbol: 'EVT',
   },
   rpcUrls: {
     default: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
     public: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
   },
   blockExplorers: {
-    default: { name: 'BscScan', url: 'https://testnet.bscscan.com' },
+    default: { name: 'EvtScan', url: 'https://testnet.bscscan.com' },
   },
   multicall: {
     address: '0x8F3273Fb89B075b1645095ABaC6ed17B2d4Bc576',

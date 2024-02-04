@@ -8,7 +8,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 const DEFAULT_MIN_PRICE_USD_DISPLAYED = BigNumber.from(10000)
 
 export default {
-  BNB: {
+  EVT: {
     address: getAddress(addresses.predictionsBNB),
     api: GRAPH_API_PREDICTION_BNB,
     chainlinkOracleAddress: getAddress(addresses.chainlinkOracleBNB),

@@ -3,7 +3,7 @@ import { bscTokens } from './tokens'
 import { CAKE_BNB_LP_MAINNET } from './farms'
 import { Ifo } from './types'
 
-export const cakeBnbLpToken = new Token(ChainId.BSC, CAKE_BNB_LP_MAINNET, 18, 'CAKE-BNB LP')
+export const cakeBnbLpToken = new Token(ChainId.BSC, CAKE_BNB_LP_MAINNET, 18, 'CAKE-EVT LP')
 
 const ifos: Ifo[] = [
   {
@@ -33,7 +33,7 @@ const ifos: Ifo[] = [
     version: 3.2,
     twitterUrl: 'https://twitter.com/MetaApesGame',
     description:
-      'Meta Apes is a free-to-play, play-and-earn massively multiplayer online (MMO) strategy game designed for mobile and the first game to launch on the BNB Sidechain with their own dedicated chain, Ape Chain.',
+      'Meta Apes is a free-to-play, play-and-earn massively multiplayer online (MMO) strategy game designed for mobile and the first game to launch on the EVT Sidechain with their own dedicated chain, Ape Chain.',
     vestingTitle: 'Utilize $PEEL for gas and governance in the Meta Apes ecosystem!',
   },
   {

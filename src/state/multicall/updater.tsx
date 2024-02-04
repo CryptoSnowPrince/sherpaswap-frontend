@@ -41,7 +41,7 @@ async function fetchChunk(
         blockTag: minBlockNumber,
       }
     )
-  } catch (err) {
+} catch (err) {
     const error = err as any
     if (
       error.code === -32000 ||

@@ -58,8 +58,8 @@ const Notification: React.FC<React.PropsWithChildren<NotificationProps>> = ({ ti
         <BunnyDecoration
           onClick={() => {
             if (token.symbol === PredictionSupportedSymbol.CAKE) {
-              router.query.token = PredictionSupportedSymbol.BNB
-            } else if (token.symbol === PredictionSupportedSymbol.BNB) {
+              router.query.token = PredictionSupportedSymbol.EVT
+            } else if (token.symbol === PredictionSupportedSymbol.EVT) {
               router.query.token = PredictionSupportedSymbol.CAKE
             }
 

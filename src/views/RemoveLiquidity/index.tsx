@@ -169,7 +169,7 @@ export default function RemoveLiquidity() {
       { name: 'verifyingContract', type: 'address' },
     ]
     const domain = {
-      name: 'Pancake LPs',
+      name: 'Sherpaswap LPs',
       version: '1',
       chainId,
       verifyingContract: pair.liquidityToken.address,
@@ -676,10 +676,10 @@ export default function RemoveLiquidity() {
                       ) : oneCurrencyIsWBNB ? (
                         <StyledInternalLink
                           href={`/remove/${
-                            currencyA && currencyEquals(currencyA, WNATIVE[chainId]) ? 'BNB' : currencyIdA
-                          }/${currencyB && currencyEquals(currencyB, WNATIVE[chainId]) ? 'BNB' : currencyIdB}`}
+                            currencyA && currencyEquals(currencyA, WNATIVE[chainId]) ? 'EVT' : currencyIdA
+                          }/${currencyB && currencyEquals(currencyB, WNATIVE[chainId]) ? 'EVT' : currencyIdB}`}
                         >
-                          {t('Receive BNB')}
+                          {t('Receive EVT')}
                         </StyledInternalLink>
                       ) : null}
                     </RowBetween>

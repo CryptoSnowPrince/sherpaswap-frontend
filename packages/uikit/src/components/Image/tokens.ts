@@ -3,13 +3,14 @@
  */
 const tokens = {
   cake: {
-    symbol: "CAKE",
+    symbol: "YAK",
     address: {
       56: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
       97: "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",
+      8848: "0x1FC855B99e97FE958c40dbF9876961Eb80F78091",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://evtscan.com/",
   },
   txl: {
     symbol: "TXL",
@@ -435,13 +436,14 @@ const tokens = {
     projectLink: "https://venus.io/",
   },
   wbnb: {
-    symbol: "wBNB",
+    symbol: "wEVT",
     address: {
-      56: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      8848: "0x399FA293e0CD85f4B87809698C921829E730a687",
+      56: "0x399FA293e0CD85f4B87809698C921829E730a687",
       97: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://evtscan.com/",
   },
   blink: {
     symbol: "BLINK",

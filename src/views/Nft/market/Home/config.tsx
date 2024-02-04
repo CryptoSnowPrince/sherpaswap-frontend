@@ -4,12 +4,12 @@ import { ContextApi } from '@pancakeswap/localization'
 const config = (t: ContextApi['t']) => {
   return [
     {
-      title: t('I sold an NFT, where’s my BNB?'),
+      title: t('I sold an NFT, where’s my EVT?'),
       description: [
         t(
-          'Trades are settled in WBNB, which is a wrapped version of BNB used on BNB Smart Chain. That means that when you sell an item, WBNB is sent to your wallet instead of BNB.',
+          'Trades are settled in WBNB, which is a wrapped version of EVT used on EVT Smart Chain. That means that when you sell an item, WBNB is sent to your wallet instead of EVT.',
         ),
-        t('You can instantly swap your WBNB for BNB with no trading fees on PancakeSwap.'),
+        t('You can instantly swap your WBNB for EVT with no trading fees on PancakeSwap.'),
       ],
     },
     {

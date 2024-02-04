@@ -160,13 +160,13 @@ export const PricePairLabel: React.FC<React.PropsWithChildren> = () => {
 
   const onTokenSwitch = useCallback(() => {
     if (router.query.token === PredictionSupportedSymbol.CAKE) {
-      router.query.token = PredictionSupportedSymbol.BNB
+      router.query.token = PredictionSupportedSymbol.EVT
     } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.CAKE) {
-      router.query.token = PredictionSupportedSymbol.BNB
-    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.BNB) {
+      router.query.token = PredictionSupportedSymbol.EVT
+    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.EVT) {
       router.query.token = PredictionSupportedSymbol.CAKE
     } else if (token.symbol === undefined && router.query.token === undefined) {
-      router.query.token = PredictionSupportedSymbol.BNB
+      router.query.token = PredictionSupportedSymbol.EVT
     } else {
       router.query.token = PredictionSupportedSymbol.CAKE
     }
@@ -186,7 +186,7 @@ export const PricePairLabel: React.FC<React.PropsWithChildren> = () => {
           </Tooltip>
         )}
         <CoinSwitcher
-          isDefaultBnb={router.query.token === 'BNB' || (router.query.token === undefined && token.symbol === 'BNB')}
+          isDefaultBnb={router.query.token === 'EVT' || (router.query.token === undefined && token.symbol === 'EVT')}
           onTokenSwitch={onTokenSwitch}
         />
         <Label dir="left" backgroundOpacity={!dismissTooltip}>

@@ -36,13 +36,13 @@ const WalletInfo: React.FC<React.PropsWithChildren<WalletInfoProps>> = ({ hasLow
       {hasLowBnbBalance && (
         <Message variant="warning" mb="24px">
           <Box>
-            <Text fontWeight="bold">{t('BNB Balance Low')}</Text>
-            <Text as="p">{t('You need BNB for transaction fees.')}</Text>
+            <Text fontWeight="bold">{t('EVT Balance Low')}</Text>
+            <Text as="p">{t('You need EVT for transaction fees.')}</Text>
           </Box>
         </Message>
       )}
       <Flex alignItems="center" justifyContent="space-between">
-        <Text color="textSubtle">{t('BNB Balance')}</Text>
+        <Text color="textSubtle">{t('EVT Balance')}</Text>
         {fetchStatus !== FetchStatus.Fetched ? (
           <Skeleton height="22px" width="60px" />
         ) : (
@@ -50,7 +50,7 @@ const WalletInfo: React.FC<React.PropsWithChildren<WalletInfoProps>> = ({ hasLow
         )}
       </Flex>
       <Flex alignItems="center" justifyContent="space-between" mb="24px">
-        <Text color="textSubtle">{t('CAKE Balance')}</Text>
+        <Text color="textSubtle">{t('YAK Balance')}</Text>
         {cakeFetchStatus !== FetchStatus.Fetched ? (
           <Skeleton height="22px" width="60px" />
         ) : (
@@ -58,7 +58,7 @@ const WalletInfo: React.FC<React.PropsWithChildren<WalletInfoProps>> = ({ hasLow
         )}
       </Flex>
       <Flex alignItems="center" justifyContent="end" mb="24px">
-        <LinkExternal href={getBscScanLink(account, 'address')}>{t('View on BscScan')}</LinkExternal>
+        <LinkExternal href={getBscScanLink(account, 'address')}>{t('View on EvtScan')}</LinkExternal>
       </Flex>
       <Button variant="secondary" width="100%" onClick={handleLogout}>
         {t('Disconnect Wallet')}
