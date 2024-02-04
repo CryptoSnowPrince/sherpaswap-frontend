@@ -85,7 +85,6 @@ export function useApproveCallback(
     }
 
     let useExact = false
-    console.log('pass1 tokenContract', tokenContract)
 
     const estimatedGas = await tokenContract.estimateGas.approve(spender, MaxUint256).catch(() => {
       // general fallback for tokens who restrict approval amounts
@@ -93,7 +92,6 @@ export function useApproveCallback(
       return tokenContract.estimateGas.approve(spender, amountToApprove.raw.toString())
     })
 
-    console.log('pass1 estimatedGas', estimatedGas)
     // eslint-disable-next-line consistent-return
     return callWithGasPrice(
       tokenContract,

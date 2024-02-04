@@ -36,7 +36,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
         <StyledIconMobileContainer display={["block", null, "none"]}>
           <LogoWithTextIcon isDark width="130px" />
         </StyledIconMobileContainer>
-        <Flex
+        {/* <Flex
           order={[2, null, 1]}
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
@@ -68,8 +68,8 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           <Box display={["none", null, "block"]}>
             <LogoWithTextIcon isDark width="160px" />
           </Box>
-        </Flex>
-        <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
+        </Flex> */}
+        {/* <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} /> */}
         <StyledToolsContainer
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
@@ -85,7 +85,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               dropdownPosition="top-right"
             />
           </Flex>
-          <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
+          {/* <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
               <CakePrice cakePriceUsd={cakePriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
@@ -98,7 +98,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             >
               {buyCakeLabel}
             </Button>
-          </Flex>
+          </Flex> */}
         </StyledToolsContainer>
       </Flex>
     </StyledFooter>
