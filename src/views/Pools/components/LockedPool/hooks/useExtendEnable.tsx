@@ -4,7 +4,7 @@ import { getFullDisplayBalance } from 'utils/formatBalance'
 import { useAppDispatch } from 'state'
 import { updateUserBalance } from 'state/pools'
 import { ETHER } from '@pancakeswap/sdk'
-import { CAKE } from 'config/constants/tokens'
+import { YAK } from 'config/constants/tokens'
 import tryParseAmount from 'utils/tryParseAmount'
 import { useTradeExactOut } from 'hooks/Trades'
 import { useSwapCallback } from 'hooks/useSwapCallback'
@@ -20,7 +20,7 @@ export const useExtendEnable = () => {
   const isTransactionPending = useIsTransactionPending(transactionHash)
   const swapAmount = useMemo(() => getFullDisplayBalance(ENABLE_EXTEND_LOCK_AMOUNT), [])
 
-  const parsedAmount = tryParseAmount(swapAmount, CAKE[chainId])
+  const parsedAmount = tryParseAmount(swapAmount, YAK[chainId])
 
   const trade = useTradeExactOut(ETHER, parsedAmount)
 

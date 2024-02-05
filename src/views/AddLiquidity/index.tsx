@@ -27,7 +27,7 @@ import { ContractMethodName } from 'utils/types'
 import { transactionErrorToUserReadableMessage } from 'utils/transactionErrorToUserReadableMessage'
 import { useLPApr } from 'state/swap/hooks'
 import { ROUTER_ADDRESS } from 'config/constants/exchange'
-import { CAKE } from 'config/constants/tokens'
+import { YAK } from 'config/constants/tokens'
 import { LightCard } from '../../components/Card'
 import { AutoColumn, ColumnCenter } from '../../components/Layout/Column'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
@@ -69,7 +69,7 @@ export default function AddLiquidity() {
   const { account, chainId, library } = useActiveWeb3React()
   const expertMode = useIsExpertMode()
 
-  const [currencyIdA, currencyIdB] = router.query.currency || ['EVT', CAKE[chainId]?.address]
+  const [currencyIdA, currencyIdB] = router.query.currency || ['EVT', YAK[chainId]?.address]
   const [steps, setSteps] = useState(Steps.Choose)
 
   const dispatch = useAppDispatch()

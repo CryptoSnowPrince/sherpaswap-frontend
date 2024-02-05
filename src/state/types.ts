@@ -55,7 +55,7 @@ export const EMPTY_LIST: TokenAddressMap = {
 
 export enum GAS_PRICE {
   default = '1.5',
-  fast = '2',
+  fast = '1.8',
   instant = '2',
   testnet = '1.5',
 }
@@ -326,7 +326,7 @@ export enum PredictionStatus {
 
 export enum PredictionSupportedSymbol {
   EVT = 'EVT',
-  CAKE = 'CAKE',
+  YAK = 'YAK',
 }
 
 export enum PredictionsChartView {

@@ -159,16 +159,16 @@ export const PricePairLabel: React.FC<React.PropsWithChildren> = () => {
   }, [])
 
   const onTokenSwitch = useCallback(() => {
-    if (router.query.token === PredictionSupportedSymbol.CAKE) {
+    if (router.query.token === PredictionSupportedSymbol.YAK) {
       router.query.token = PredictionSupportedSymbol.EVT
-    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.CAKE) {
+    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.YAK) {
       router.query.token = PredictionSupportedSymbol.EVT
     } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.EVT) {
-      router.query.token = PredictionSupportedSymbol.CAKE
+      router.query.token = PredictionSupportedSymbol.YAK
     } else if (token.symbol === undefined && router.query.token === undefined) {
       router.query.token = PredictionSupportedSymbol.EVT
     } else {
-      router.query.token = PredictionSupportedSymbol.CAKE
+      router.query.token = PredictionSupportedSymbol.YAK
     }
     if (!dismissTooltip) onDismissTooltip()
 

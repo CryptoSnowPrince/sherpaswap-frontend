@@ -4,7 +4,7 @@ import { SerializedFarmConfig } from './types'
 
 const serializedTokens = serializeTokens(bscTokens)
 
-export const CAKE_BNB_LP_MAINNET = '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
+export const YAK_BNB_LP_MAINNET = '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
 
 const farms: SerializedFarmConfig[] = [
   /**
@@ -13,7 +13,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 0,
     v1pid: 0,
-    lpSymbol: 'CAKE',
+    lpSymbol: 'YAK',
     lpAddresses: {
       97: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
       56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
@@ -24,10 +24,10 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 2,
     v1pid: 251,
-    lpSymbol: 'CAKE-EVT LP',
+    lpSymbol: 'YAK-EVT LP',
     lpAddresses: {
       97: '0x3ed8936cAFDF85cfDBa29Fbe5940A5b0524824F4',
-      56: CAKE_BNB_LP_MAINNET,
+      56: YAK_BNB_LP_MAINNET,
     },
     token: serializedTokens.cake,
     quoteToken: serializedTokens.wbnb,
@@ -98,7 +98,7 @@ const farms: SerializedFarmConfig[] = [
   },
   {
     pid: 111,
-    lpSymbol: 'AOG-CAKE LP',
+    lpSymbol: 'AOG-YAK LP',
     lpAddresses: {
       56: '0xF8cA29a3BF6d34691981D3Ee8D4c9Cd1C437EfeE',
       97: '',
@@ -358,7 +358,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 88,
     v1pid: 518,
-    lpSymbol: 'FROYO-CAKE LP',
+    lpSymbol: 'FROYO-YAK LP',
     lpAddresses: {
       97: '',
       56: '0x1CCc3cC95c8148477Afd18a552f03835Be9D182a',
@@ -380,7 +380,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 86,
     v1pid: 515,
-    lpSymbol: 'DUET-CAKE LP',
+    lpSymbol: 'DUET-YAK LP',
     lpAddresses: {
       97: '',
       56: '0xbDF0aA1D1985Caa357A6aC6661D838DA8691c569',
@@ -798,7 +798,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 47,
     v1pid: 422,
-    lpSymbol: 'CAKE-USDT LP',
+    lpSymbol: 'YAK-USDT LP',
     lpAddresses: {
       97: '',
       56: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b',
@@ -875,7 +875,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 39,
     v1pid: 389,
-    lpSymbol: 'CAKE-BUSD LP',
+    lpSymbol: 'YAK-BUSD LP',
     lpAddresses: {
       97: '0x25293964dcaFd8a6cDf97AFF8b6559FD4A5Af864',
       56: '0x804678fa97d91B974ec2af3c843270886528a9E6',

@@ -20,7 +20,7 @@ import {
 } from './styles'
 import { PancakeSquadHeaderType } from './types'
 
-const DEFAULT_CAKE_COST = 15
+const DEFAULT_YAK_COST = 15
 const DEFAULT_MAX_TICKETS = 10
 
 const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderType>> = ({
@@ -76,15 +76,15 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
         {`${t('Public Sale:')} 08:00 UTC, Oct. 7`}
       </Text>
       <Text color={lightColors.warning} textAlign="center" bold>
-        {t('Mint Cost: %minCost% CAKE each', {
-          minCost: DEFAULT_CAKE_COST,
+        {t('Mint Cost: %minCost% YAK each', {
+          minCost: DEFAULT_YAK_COST,
         })}
       </Text>
       <Text color={lightColors.warning} textAlign="center" bold>
         {t('Max per wallet: %maxPerWallet%', { maxPerWallet: DEFAULT_MAX_TICKETS })}
       </Text>
       <Text color={lightColors.invertedContrast} textAlign="center">
-        {t('PancakeSwap’s first official generative NFT collection.')}
+        {t('Sherpaswap’s first official generative NFT collection.')}
       </Text>
       <Text color={lightColors.invertedContrast} mb={!displayEventBlock ? '80px' : '32px'} textAlign="center">
         {t('Join the squad.')}

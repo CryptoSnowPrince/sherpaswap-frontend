@@ -73,7 +73,7 @@ const OldFarmStep1: React.FC<React.PropsWithChildren> = () => {
     const { token, quoteToken } = farm
     const tokenAddress = token.address
     const quoteTokenAddress = quoteToken.address
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PANCAKE', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('YAK', '')
 
     const row: RowProps = {
       apr: {

@@ -127,7 +127,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] = [
   },
   {
     account: '0x1bA962acab22Be9e49C4cEBE7710c9201A72dFcc',
-    farmName: 'BABYCAKE-EVT',
+    farmName: 'BABYYAK-EVT',
     tokenAddress: '0xdB8D30b74bf098aF214e862C90E647bbB1fcC58c',
     quoteToken: bscTokens.wbnb,
     tokenName: 'Babycake',
@@ -775,7 +775,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] = [
   },
   {
     account: '0x6a2d41c87c3F28C2C0b466424DE8e08FC2E23eDc',
-    farmName: 'AOG-CAKE',
+    farmName: 'AOG-YAK',
     tokenAddress: '0x40C8225329Bd3e28A043B029E0D07a5344d2C27C',
     quoteToken: bscTokens.cake,
     tokenName: 'AOG',

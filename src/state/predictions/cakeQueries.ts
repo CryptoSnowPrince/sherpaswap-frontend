@@ -1,28 +1,28 @@
 import { UserResponse, BetResponse, HistoricalBetResponse, RoundResponse } from './responseType'
 
-export interface UserResponseCAKE extends UserResponse<BetResponseCAKE> {
-  totalCAKE: string
-  totalCAKEBull: string
-  totalCAKEBear: string
-  averageCAKE: string
-  totalCAKEClaimed: string
-  netCAKE: string
+export interface UserResponseYAK extends UserResponse<BetResponseYAK> {
+  totalYAK: string
+  totalYAKBull: string
+  totalYAKBear: string
+  averageYAK: string
+  totalYAKClaimed: string
+  netYAK: string
 }
 
-export interface BetResponseCAKE extends BetResponse {
-  claimedCAKE: string
-  claimedNetCAKE: string
-  user?: UserResponseCAKE
-  round?: RoundResponseCAKE
+export interface BetResponseYAK extends BetResponse {
+  claimedYAK: string
+  claimedNetYAK: string
+  user?: UserResponseYAK
+  round?: RoundResponseYAK
 }
 
-export type HistoricalBetResponseCAKE = HistoricalBetResponse<UserResponseCAKE>
+export type HistoricalBetResponseYAK = HistoricalBetResponse<UserResponseYAK>
 
-export type RoundResponseCAKE = RoundResponse<BetResponseCAKE>
+export type RoundResponseYAK = RoundResponse<BetResponseYAK>
 
-export interface TotalWonMarketResponseCAKE {
-  totalCAKE: string
-  totalCAKETreasury: string
+export interface TotalWonMarketResponseYAK {
+  totalYAK: string
+  totalYAKTreasury: string
 }
 
 /**
@@ -63,8 +63,8 @@ export const betBaseFields = `
  claimedAt
  claimedHash
  claimedBlock
- claimedCAKE
- claimedNetCAKE
+ claimedYAK
+ claimedNetYAK
  createdAt
  updatedAt
 `
@@ -77,12 +77,12 @@ export const userBaseFields = `
   totalBets
   totalBetsBull
   totalBetsBear
-  totalCAKE
-  totalCAKEBull
-  totalCAKEBear
+  totalYAK
+  totalYAKBull
+  totalYAKBear
   totalBetsClaimed
-  totalCAKEClaimed
+  totalYAKClaimed
   winRate
-  averageCAKE
-  netCAKE
+  averageYAK
+  netYAK
 `

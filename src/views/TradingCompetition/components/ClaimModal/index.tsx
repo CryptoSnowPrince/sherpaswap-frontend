@@ -68,7 +68,7 @@ const ClaimModal: React.FC<React.PropsWithChildren<CompetitionProps>> = ({
         </Flex>
         {/* tokens */}
         <Heading mt="16px" scale="md" mb={canClaimNFT ? '16px' : '0px'}>
-          {cakeReward.toFixed(4)} CAKE
+          {cakeReward.toFixed(4)} YAK
         </Heading>
         <Heading mt="16px" scale="md" mb={canClaimNFT ? '16px' : '0px'}>
           {darReward.toFixed(4)} DAR
@@ -87,7 +87,7 @@ const ClaimModal: React.FC<React.PropsWithChildren<CompetitionProps>> = ({
             <ImageWrapper>
               <Image src={MoDAllBunnies} width={128} height={95} />
             </ImageWrapper>
-            <Text mt="8px">{t('PancakeSwap NFT')}</Text>
+            <Text mt="8px">{t('Sherpaswap NFT')}</Text>
             <Text color="textSubtle" mt="8px" fontSize="12px" textAlign="center">
               {t(
                 'Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.',

@@ -1,4 +1,4 @@
 const getTokenLogoURL = (address: string) =>
-  `https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/${address}/logo.png`
+  `http://localhost:3000/images/tokens/${address}.png` // TODO PRINCE
 
 export default getTokenLogoURL

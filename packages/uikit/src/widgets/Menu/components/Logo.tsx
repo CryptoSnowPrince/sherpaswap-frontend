@@ -49,18 +49,18 @@ const Logo: React.FC<React.PropsWithChildren<Props>> = ({ isDark, href }) => {
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      {/* <LogoWithTextIcon className="desktop-icon" isDark={isDark} /> */}
     </>
   );
 
   return (
     <Flex>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
+        <StyledLink as="a" href={href} aria-label="Sherpaswap home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink href={href} as={linkComponent} aria-label="Pancake home page">
+        <StyledLink href={href} as={linkComponent} aria-label="Sherpaswap home page">
           {innerLogo}
         </StyledLink>
       )}

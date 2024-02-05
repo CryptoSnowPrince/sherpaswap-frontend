@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 import { getFarmApr } from 'utils/apr'
 import { RowType } from '@pancakeswap/uikit'
 import { ChainId } from '@pancakeswap/sdk'
-import { CAKE_PER_YEAR } from 'config'
+import { YAK_PER_YEAR } from 'config'
 import { useFarmsV1, usePriceCakeBusd } from 'state/farmsV1/hooks'
 import { DeserializedFarm } from 'state/types'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -42,7 +42,7 @@ const OldFarmStep1: React.FC<React.PropsWithChildren> = () => {
           cakePrice,
           totalLiquidity,
           farm.lpAddresses[ChainId.BSC],
-          CAKE_PER_YEAR,
+          YAK_PER_YEAR,
         )
         return { ...farm, apr: cakeRewardsApr, lpRewardsApr, liquidity: totalLiquidity }
       })
@@ -57,7 +57,7 @@ const OldFarmStep1: React.FC<React.PropsWithChildren> = () => {
   }, [stakedOrHasTokenBalance, farmsList])
 
   const rowData = chosenFarmsMemoized.map((farm) => {
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PANCAKE', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('YAK', '')
 
     const row: RowProps = {
       farm: {

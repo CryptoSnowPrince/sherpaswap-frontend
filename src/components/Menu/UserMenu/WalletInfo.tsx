@@ -1,6 +1,6 @@
 import { Box, Button, Flex, InjectedModalProps, LinkExternal, Message, Skeleton, Text } from '@pancakeswap/uikit'
 import { useWeb3React } from '@web3-react/core'
-import { CAKE } from 'config/constants/tokens'
+import { YAK } from 'config/constants/tokens'
 import { FetchStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
 import useAuth from 'hooks/useAuth'
@@ -19,7 +19,7 @@ const WalletInfo: React.FC<React.PropsWithChildren<WalletInfoProps>> = ({ hasLow
   const { t } = useTranslation()
   const { account, chainId } = useWeb3React()
   const { balance, fetchStatus } = useGetBnbBalance()
-  const { balance: cakeBalance, fetchStatus: cakeFetchStatus } = useTokenBalance(CAKE[chainId]?.address)
+  const { balance: cakeBalance, fetchStatus: cakeFetchStatus } = useTokenBalance(YAK[chainId]?.address)
   const { logout } = useAuth()
 
   const handleLogout = () => {
