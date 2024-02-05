@@ -1,4 +1,3 @@
-const getTokenLogoURL = (address: string) =>
-  `http://localhost:3000/images/tokens/${address}.png` // TODO PRINCE
+const getTokenLogoURL = (address: string) => `https://sherpaswap.metabest.tech/images/tokens/${address}.png`
 
 export default getTokenLogoURL

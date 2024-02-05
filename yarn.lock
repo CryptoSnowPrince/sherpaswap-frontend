@@ -16380,6 +16380,11 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
+next-nginx-routes@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/next-nginx-routes/-/next-nginx-routes-1.2.1.tgz#774cdc636e9b34436092a157660f913ef8204462"
+  integrity sha512-Dwr9P9xlaq3DC54OHNLC0FYuC11o9Aug6xhMTsAu5HKZth/sZhVp4BiOKxDLDcK43VyOl3a5b3aWjbwwRyn1DA==
+
 next-themes@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.0.tgz#fdc507f61e95b3ae513dee8d4783bcec8c02e3a3"

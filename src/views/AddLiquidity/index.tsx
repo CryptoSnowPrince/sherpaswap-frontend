@@ -153,20 +153,12 @@ export default function AddLiquidity() {
     () => ({
       [independentField]:
         undefined &&
-          ((independentField === Field.CURRENCY_A && !undefined) ||
-            (independentField === Field.CURRENCY_B && !undefined))
+        ((independentField === Field.CURRENCY_A && !undefined) || (independentField === Field.CURRENCY_B && !undefined))
           ? ''
           : typedValue,
       [dependentField]: noLiquidity ? otherTypedValue : parsedAmounts[dependentField]?.toSignificant(6) ?? '',
     }),
-    [
-      dependentField,
-      independentField,
-      noLiquidity,
-      otherTypedValue,
-      parsedAmounts,
-      typedValue,
-    ],
+    [dependentField, independentField, noLiquidity, otherTypedValue, parsedAmounts, typedValue],
   )
 
   const atMaxAmounts: { [field in Field]?: TokenAmount } = [Field.CURRENCY_A, Field.CURRENCY_B].reduce(
@@ -180,14 +172,8 @@ export default function AddLiquidity() {
   )
 
   // check whether the user has approved the router on the tokens
-  const [approvalA, approveACallback] = useApproveCallback(
-    parsedAmounts[Field.CURRENCY_A],
-    ROUTER_ADDRESS[chainId],
-  )
-  const [approvalB, approveBCallback] = useApproveCallback(
-    parsedAmounts[Field.CURRENCY_B],
-    ROUTER_ADDRESS[chainId],
-  )
+  const [approvalA, approveACallback] = useApproveCallback(parsedAmounts[Field.CURRENCY_A], ROUTER_ADDRESS[chainId])
+  const [approvalB, approveBCallback] = useApproveCallback(parsedAmounts[Field.CURRENCY_B], ROUTER_ADDRESS[chainId])
 
   const addTransaction = useTransactionAdder()
 
@@ -249,8 +235,9 @@ export default function AddLiquidity() {
           setLiquidityState({ attemptingTxn: false, liquidityErrorMessage: undefined, txHash: response.hash })
 
           addTransaction(response, {
-            summary: `Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${currencies[Field.CURRENCY_A]?.symbol
-              } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`,
+            summary: `Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${
+              currencies[Field.CURRENCY_A]?.symbol
+            } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`,
             type: 'add-liquidity',
           })
         }),
@@ -319,8 +306,8 @@ export default function AddLiquidity() {
 
   const buttonDisabled = !isValid
 
-  const showFieldAApproval = (approvalA === ApprovalState.NOT_APPROVED || approvalA === ApprovalState.PENDING)
-  const showFieldBApproval = (approvalB === ApprovalState.NOT_APPROVED || approvalB === ApprovalState.PENDING)
+  const showFieldAApproval = approvalA === ApprovalState.NOT_APPROVED || approvalA === ApprovalState.PENDING
+  const showFieldBApproval = approvalB === ApprovalState.NOT_APPROVED || approvalB === ApprovalState.PENDING
 
   const shouldShowApprovalGroup = (showFieldAApproval || showFieldBApproval) && isValid
 
@@ -355,7 +342,7 @@ export default function AddLiquidity() {
               helper={t(
                 'Liquidity providers earn a 0.17% trading fee on all trades made for that token pair, proportional to their share of the liquidity pool.',
               )}
-              backTo={'/liquidity'}
+              backTo="/liquidity"
             />
             <CardBody>
               <AutoColumn gap="20px">
@@ -378,13 +365,9 @@ export default function AddLiquidity() {
                   onInputBlur={undefined}
                   error={false}
                   disabled={false}
-                  beforeButton={
-                    undefined && (
-                      <></>
-                    )
-                  }
+                  beforeButton={undefined && <></>}
                   onCurrencySelect={handleCurrencyASelect}
-                  zapStyle={'noZap'}
+                  zapStyle="noZap"
                   value={formattedAmounts[Field.CURRENCY_A]}
                   onUserInput={onFieldAInput}
                   onMax={() => {
@@ -404,11 +387,7 @@ export default function AddLiquidity() {
                   onInputBlur={undefined}
                   disabled={undefined && !undefined}
                   error={false}
-                  beforeButton={
-                    undefined && (
-                      <></>
-                    )
-                  }
+                  beforeButton={undefined && <></>}
                   onCurrencySelect={handleCurrencyBSelect}
                   disableCurrencySelect={undefined}
                   zapStyle={undefined ? 'zap' : 'noZap'}
