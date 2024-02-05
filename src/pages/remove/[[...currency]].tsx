@@ -3,43 +3,35 @@ import RemoveLiquidity from 'views/RemoveLiquidity'
 
 export default RemoveLiquidity
 
-const OLD_PATH_STRUCTURE = /^(0x[a-fA-F0-9]{40})-(0x[a-fA-F0-9]{40})$/
+const OLD_PATH_STRUCTURE = /^(0x[a-fA-F0-9]{40}|EVT)-(0x[a-fA-F0-9]{40}|EVT)$/
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    paths: [],
+    paths: [{ params: { currency: [] } }],
     fallback: true,
   }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const currency = (params.currency as string[]) || []
+  const { currency = [] } = params
+  const [currencyIdA, currencyIdB] = currency
+  const match = currencyIdA?.match(OLD_PATH_STRUCTURE)
 
-  if (currency.length === 0) {
+  if (match?.length) {
     return {
-      notFound: true,
+      redirect: {
+        statusCode: 301,
+        destination: `/remove/${match[1]}/${match[2]}`,
+      },
     }
   }
 
-  if (currency.length === 1) {
-    if (!OLD_PATH_STRUCTURE.test(currency[0])) {
-      return {
-        redirect: {
-          statusCode: 307,
-          destination: `/pool`,
-        },
-      }
-    }
-
-    const split = currency[0].split('-')
-    if (split.length > 1) {
-      const [currency0, currency1] = split
-      return {
-        redirect: {
-          statusCode: 307,
-          destination: `/remove/${currency0}/${currency1}`,
-        },
-      }
+  if (currencyIdA && currencyIdB && currencyIdA.toLowerCase() === currencyIdB.toLowerCase()) {
+    return {
+      redirect: {
+        statusCode: 303,
+        destination: `/remove/${currencyIdA}`,
+      },
     }
   }
 

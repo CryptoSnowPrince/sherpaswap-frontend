@@ -11,12 +11,7 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
     //     fill="white"
     //   />
     // </Svg>
-    <img
-      src="./logo.png"
-      height="24px"
-      width="24px"
-      alt="logo"
-    />
+    <img src="https://sherpaswap.metabest.tech/logo.png" height="24px" width="24px" alt="logo" />
   );
 };
 

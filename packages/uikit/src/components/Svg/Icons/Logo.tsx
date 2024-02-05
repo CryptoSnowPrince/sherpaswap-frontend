@@ -26,11 +26,11 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
     //   />
     // </Svg>
     <img
-      src="./logowithtext.png"
+      src="https://sherpaswap.metabest.tech/logowithtext.png"
       height="32px"
       width="128px"
       alt="logo"
-      style={{ marginBottom: '12px', marginTop: '12px' }}
+      style={{ marginBottom: "12px", marginTop: "12px" }}
     />
   );
 };
