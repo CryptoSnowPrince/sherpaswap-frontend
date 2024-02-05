@@ -41,7 +41,7 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  [ChainId.BSC]: [bscTokens.cake],
+  [ChainId.BSC]: [bscTokens.cake, bscTokens.usdt],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
 }
 
@@ -52,9 +52,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.BSC]: [
-    [bscTokens.cake, bscTokens.wbnb],
-  ],
+  [ChainId.BSC]: [[bscTokens.cake, bscTokens.wbnb]],
 }
 
 export const BIG_INT_ZERO = JSBI.BigInt(0)

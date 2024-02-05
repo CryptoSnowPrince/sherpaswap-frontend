@@ -72,14 +72,7 @@ export const BUSD: Record<ChainId, Token> = {
 export const bscTokens = {
   wbnb: WBNB[ChainId.BSC],
   // bnb here points to the wbnb contract. Wherever the currency EVT is required, conditional checks for the symbol 'EVT' can be used
-  bnb: new Token(
-    ChainId.BSC,
-    '0x399FA293e0CD85f4B87809698C921829E730a687',
-    18,
-    'EVT',
-    'EVT',
-    'https://evtscan.com/',
-  ),
+  bnb: new Token(ChainId.BSC, '0x399FA293e0CD85f4B87809698C921829E730a687', 18, 'EVT', 'EVT', 'https://evtscan.com/'),
   cake: YAK_MAINNET,
   gmi: new Token(ChainId.BSC, '0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846', 18, 'GMI', 'Gamifi', 'https://gamifi.gg/'),
   tlos: new Token(
@@ -150,7 +143,8 @@ export const bscTokens = {
   ),
   usdt: new Token(
     ChainId.BSC,
-    '0x55d398326f99059fF775485246999027B3197955',
+    '0xf3b23b237dBb5b13606C596bC8a1B83774Db3377',
+    // '0xf3b23b237dbb5b13606c596bc8a1b83774db3377',
     18,
     'USDT',
     'Tether USD',
