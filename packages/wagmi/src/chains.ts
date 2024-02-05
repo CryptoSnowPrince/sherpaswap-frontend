@@ -83,8 +83,8 @@ export const bsc: Chain = {
   name: 'EVT Chain',
   network: 'EVT',
   rpcUrls: {
-    default: 'http://158.69.35.30:8545',
-    public: 'http://158.69.35.30:8545',
+    default: 'https://sherpa.everestchain.net',
+    public: 'https://sherpa.everestchain.net',
   },
   blockExplorers: {
     default: bscExplorer,
