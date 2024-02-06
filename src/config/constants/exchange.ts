@@ -4,7 +4,7 @@ import { bscTokens, bscTestnetTokens } from './tokens'
 import { ChainTokenList } from './types'
 
 export const ROUTER_ADDRESS = {
-  [ChainId.BSC]: '0x64AA69b86d3697a74FF00B9677c9e9F21Cd9d7C7',
+  [ChainId.BSC]: '0xB4916C8cD7DE8708Af9CfaF2B07745A5Bb73f69F',
   [ChainId.BSC_TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
 }
 

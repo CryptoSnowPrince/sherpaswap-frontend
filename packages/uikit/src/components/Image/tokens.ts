@@ -7,7 +7,7 @@ const tokens = {
     address: {
       56: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
       97: "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",
-      8848: "0x1FC855B99e97FE958c40dbF9876961Eb80F78091",
+      8848: "0xc5139989b1B408Bd2e51B566A321Cfb9a00501Fa",
     },
     decimals: 18,
     projectLink: "https://evtscan.com/",

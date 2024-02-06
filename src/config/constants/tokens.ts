@@ -2,7 +2,7 @@ import { ChainId, Token, WBNB } from '@pancakeswap/sdk'
 
 const YAK_MAINNET = new Token(
   ChainId.BSC,
-  '0x1FC855B99e97FE958c40dbF9876961Eb80F78091',
+  '0xc5139989b1B408Bd2e51B566A321Cfb9a00501Fa',
   18,
   'YAK',
   'YAK',
@@ -143,8 +143,7 @@ export const bscTokens = {
   ),
   usdt: new Token(
     ChainId.BSC,
-    '0xf3b23b237dBb5b13606C596bC8a1B83774Db3377',
-    // '0xf3b23b237dbb5b13606c596bc8a1b83774db3377',
+    '0x92B3dE11FeE9aB8D7129956CceE25F3C2B6574E6',
     18,
     'USDT',
     'Tether USD',
